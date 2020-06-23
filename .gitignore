@@ -1,0 +1,16 @@
+/.DS_Store
+/.idea/
+#忽略所有的test和target
+#foodie-dev-api/src/test/
+foodie-dev-api/target/
+foodie-dev-common/src/test/
+foodie-dev-common/target/
+foodie-dev-mapper/src/test/
+foodie-dev-mapper/target/
+foodie-dev-pojo/src/test/
+foodie-dev-pojo/src/target/
+foodie-dev-service/src/test/
+foodie-dev-service/target/
+src/test/
+#other
+
