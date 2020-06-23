@@ -1,0 +1,14 @@
+#生产环境，打包测试都ok后上线给用户用，其实一些大公司在生产环境和测试环境中间还有个预发布环境
+server:
+  port: 8088
+
+spring:
+  datasource:                                           # 数据源的相关配置(localhost改为服务器内网地址)
+    url: jdbc:mysql://111.231.66.209:3306/foodie-shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: zsfhyj131425.
+  redis:                                               #redis的设置
+    database: 1                                        #好像可以随意设置
+    host: 111.231.66.209
+    port: 6379                                         #默认的端口
+    password: luotao
