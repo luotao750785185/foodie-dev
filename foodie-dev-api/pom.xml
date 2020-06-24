@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <!--打包[1]:打包为war，默认为jar，-->
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <artifactId>foodie-dev-api</artifactId>
     <!--1、配置与common兄弟项目的依赖，这样就可以使用它的资源了
@@ -26,8 +26,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope><!--作用域仅仅在test文件夹下-->
         </dependency>
-
-
     </dependencies>
+    <!--打成jar包需要添加这个（自动配置了启动类）-->
+    <build>
+        <!--指定jar包包名，不指定则会以artifactId和version组成命名-->
+        <finalName>foodie-dev</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -4,9 +4,9 @@ server:
 
 spring:
   datasource:                                           # 数据源的相关配置(localhost改为服务器内网地址)
-    url: jdbc:mysql://111.231.66.209:3306/foodie-shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://111.231.66.209:3306/foodie-shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
-    password: zsfhyj131425.
+    password: luotao19950720
   redis:                                               #redis的设置
     database: 1                                        #好像可以随意设置
     host: 111.231.66.209

@@ -8,8 +8,7 @@
     <artifactId>foodie-dev</artifactId><!--项目名-->
     <version>1.0-SNAPSHOT</version>
     <!--1、modules本来没有，但是你新建子工程（maven中称为module）后(新建方式和结构都是一样的)，这里会自动添加子module。
-        2、父子工程是继承关系（所以子工程可以调用父工程所以东西），子工程与子过程是平级的，相互调用
-        需要构建依赖
+        2、父子工程是继承关系（所以子工程可以调用父工程所以东西），子工程与子过程是平级的，要相互调用需要构建依赖
         3.一个父工程由许多子工程组建而成，从而称为一个项目-->
     <modules>
         <module>foodie-dev-common</module> <!--存放工具类-->
@@ -48,7 +47,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!--打包[2]:去除内置的Tomcat，这是在打包时的操作（不打包时需要注释调，否则报错）-->
+            <!--打包[2]:去除内置的Tomcat，这是在打成war包时的操作（不打包时需要注释调，否则报错）-->
 <!--            <exclusions>-->
 <!--                <exclusion>-->
 <!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
@@ -141,7 +140,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-
 
         <!--打包[3]:添加依赖-->
         <dependency>

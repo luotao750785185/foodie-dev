@@ -4,11 +4,12 @@
 #
 ############################################################
 server:
-#  path: /app-test  #http://localhost:8088/app-test 可访问到项目
   port: 8088     # http://localhost:8088/接口即可访问到项目
   tomcat:
     uri-encoding: UTF-8
   max-http-header-size: 80KB
+  servlet:
+    context-path: /foodie-dev-api    #http://localhost:8088/app-test 可访问到项目
 ############################################################
 #
 # 配置数据源信息
@@ -16,7 +17,7 @@ server:
 ############################################################
 spring:
   profiles:
-    active: prod                                          #选择的环境（挂件）
+    active: dev                                          #选择的环境（挂件）
   datasource:                                           # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP（效率极高）
     driver-class-name: com.mysql.jdbc.Driver          # mysql驱动
